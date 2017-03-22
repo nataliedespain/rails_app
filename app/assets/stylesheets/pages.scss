@@ -1,25 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500');
+$lightgray: #ebf1f4;
+$lightpink: #d39eb0;
+$pink: #b26781;
 
-h1 {
-	font-family: "Quicksand", sans-serif;
-	font-size: 6.5vmax;
-	text-align: center;
-	font-weight: 300;
-	padding: 55px;
+.header {
+	background: $lightgray;
 }
 
-h1 a {
+.header h1 {
+	font-family: "Roboto", sans-serif;
+	font-size: 3vmax;
+	text-align: center;
+	font-weight: 100;
+	padding: 40px;
+	letter-spacing: 3px;
+}
+
+.header a {
 	text-decoration: none;
 	color: #494949;
 }
 
-.bold {
-	font-weight: 700;
+.nav-container {
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
 }
 
-hr {
-	width: 80vw;
-	color: #494949;
+.add-margin {
+	margin: 35px;
+}
+
+.nav-container span {
+	padding: 40px;
+}
+
+.nav-container a {
+	text-decoration: none;
+	color: gray;
+	font-weight: 100;
+	letter-spacing: 1.5px;
+	transition: all 0.3s ease;
+}
+
+.nav-container a:hover {
+	color: $pink;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .container {
@@ -32,7 +86,7 @@ hr {
 }
 
 .box {
-	background: #5da4d3;
+	background: $lightpink;
   height: 250px;
   width: 400px;
   float: left;
@@ -44,11 +98,11 @@ hr {
 }
 
 .box:hover {
-	background: #4388b2;
+	background: $pink;
 }
 
 h2 {
-	font-family: "Lato", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 3vmax;
 	text-align: center;
 	font-weight: 100;

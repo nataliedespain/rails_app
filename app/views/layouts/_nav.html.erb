@@ -1,11 +1,24 @@
-<h1><%=link_to "rails", root_path %> <span class="bold"><%=link_to "blog.", root_path %></span></h1>
-<center><hr></center>
+<div class="header">
+	<h1><%=link_to "RAILS BLOG", root_path %></h1>
+</div>
 
+<div class="nav-container">
 <% if logged_in? %>
-  <%= link_to "Users", '#' %>
-      <%= link_to "Profile", current_user %>
-      <%= link_to "Settings", '#' %>
-       <%= link_to "Log out", logout_path, method: "delete" %>
+	<span><%= link_to "HOME", root_path %></span>
+	<span><%= link_to "ALL POSTS", posts_path %></span>
+  <span><%= link_to "USERS", '#' %></span>
+  <span class="dropdown">
+  	<%= link_to @user.name.upcase, current_user %>
+  	<div class="dropdown-content">
+	  	<%= link_to "PROFILE", current_user %>
+	  	<%= link_to "LOG OUT", logout_path, method: "delete" %>
+  	</div>
+  </span>
 <% else %>
-  <%= link_to "Log in", login_path %>
+	<div class="add-margin">
+		<span><%= link_to "HOME", root_path %></span>
+		<span><%= link_to "ALL POSTS", posts_path %></span>
+	  <span><%= link_to "USERS", '#' %></span>
+  </div>
 <% end %>
+</div>

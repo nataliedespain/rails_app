@@ -4,8 +4,14 @@
 <h2>All Posts</h2>
 
 <%= link_to new_post_path do %>
-	<center><button class="new-button">New Post</button></center>
+	<center><button class="new-button">NEW POST</button></center>
 <% end %>
+
+<div class="count">
+	<% if @posts.count == 0 %>
+		<p>No posts have been created yet... :(</p>
+	<% end %>
+</div>
 
 <% @posts.each do |p| %>
 
@@ -16,7 +22,7 @@
 		<p><%= p.body %></p>
 		<h4><%= p.name %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= time_ago_in_words(p.created_at) %> ago</h4>
 		<%= link_to post_path(p) do %>
-			<button class="view-button">View Post</button>
+			<button class="view-button">VIEW POST</button>
 		<% end %>
 	</div>
 	

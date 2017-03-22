@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500');
+$lightgray: #ebf1f4;
+$lightpink: #d39eb0;
+$pink: #b26781;
+
 
 /*INDEX PAGE*/
 .post-container {
 	width: 67.5vw;
 	margin: 50px auto;
-	background: #e8e8e8;
+	border: $lightgray 2px solid;
 }
 
 .post-container h2 {
@@ -61,7 +65,7 @@
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
-	background: #5da4d3;
+	background: $lightpink;
 	border: none;
 	color: white;
 	padding: 7px 15px;
@@ -73,13 +77,13 @@
 }
 
 .view-button:hover {
-	background: #4388b2;
+	background: $pink;
 }
 
 .new-button {
-	font-family: "Lato", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	width: 20vw;
-	background: #5da4d3;
+	background: $lightpink;
 	border: none;
 	color: white;
 	padding: 7px 15px;
@@ -98,9 +102,22 @@
 }
 
 .new-button:hover {
-	background: #4388b2;
+	background: $pink;
 }
 
+.count {
+	background: white;
+	text-align: center;
+	padding: 20px;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.count p {
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+}
 
 
 /*NEW POST PAGE*/
