@@ -4,6 +4,10 @@
 	<%= link_to posts_path do %>
 	<div class="box"><h2>View all Posts</h2></div>
 	<% end %>
+
+	<%= link_to new_post_path do %>
+	<div class="box"><h2>Create new Post</h2></div>
+	<% end %>
 <% else %>
 	<%= link_to login_path do %>
 	<div class="box"><h2>Log in</h2></div>

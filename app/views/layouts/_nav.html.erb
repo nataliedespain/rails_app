@@ -8,7 +8,7 @@
 	<span><%= link_to "ALL POSTS", posts_path %></span>
   <span><%= link_to "USERS", '#' %></span>
   <span class="dropdown">
-  	<%= link_to "user", current_user %>
+  	<%= link_to current_user.name.upcase, current_user %> ▼
   	<div class="dropdown-content">
 	  	<%= link_to "PROFILE", current_user %>
 	  	<%= link_to "LOG OUT", logout_path, method: "delete" %>

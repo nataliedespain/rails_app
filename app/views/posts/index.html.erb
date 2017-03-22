@@ -20,7 +20,7 @@
 		<div class="post-comments"><%= p.comments.count %> comments</div>
 		<hr>
 		<p><%= p.body %></p>
-		<h4><%= p.name %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= time_ago_in_words(p.created_at) %> ago</h4>
+		<h4><%= p.user.name %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= time_ago_in_words(p.created_at) %> ago</h4>
 		<%= link_to post_path(p) do %>
 			<button class="view-button">VIEW POST</button>
 		<% end %>

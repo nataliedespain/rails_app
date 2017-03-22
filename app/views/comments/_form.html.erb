@@ -3,10 +3,6 @@
 	<%= form_for([@post, @post.comments.build]) do |f| %>
 	
 	<div class="comment-text">
-		<%= f.text_field :name, placeholder: "Name" %>
-	</div>
-	
-	<div class="comment-text">
 		<%= f.text_area :body, placeholder: "Body" %>
 	</div>
 	
