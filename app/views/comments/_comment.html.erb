@@ -1,0 +1,8 @@
+<div class="comment">
+	<h3><%= comment.name %>:</h3>
+	<center><hr></center>
+	<p><%= comment.body %></p>
+	<% if comment.created_at %>
+	  <h6><%= time_ago_in_words(comment.created_at) %> ago</h6>
+	<% end %>
+</div>

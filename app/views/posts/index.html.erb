@@ -1,0 +1,25 @@
+
+<div class="post-container">
+
+<h2>All Posts</h2>
+
+<%= link_to new_post_path do %>
+	<center><button class="new-button">New Post</button></center>
+<% end %>
+
+<% @posts.each do |p| %>
+
+	<div class="post">
+		<h3><%= p.title %></h3>
+		<div class="post-comments"><%= p.comments.count %> comments</div>
+		<hr>
+		<p><%= p.body %></p>
+		<h4><%= p.name %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= time_ago_in_words(p.created_at) %> ago</h4>
+		<%= link_to post_path(p) do %>
+			<button class="view-button">View Post</button>
+		<% end %>
+	</div>
+	
+<% end %>
+<br>
+</div>

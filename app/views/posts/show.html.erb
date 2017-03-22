@@ -1,0 +1,20 @@
+<div class="show">
+	<h2><%= @post.title %></h2>
+	<center><hr></center>
+	<h3>Created by <%= @post.name %> <%= time_ago_in_words(@post.created_at) %> ago</h3>
+	<p><%= @post.body %></p>
+	<%= link_to posts_path do %>
+		<center><button class="show-button">Back to all posts</button></center>
+	<% end %>
+</div>
+
+<div class="comment-container">
+	<h2>Comments (<%= @post.comments.count %>)</h2>
+	<%= render @post.comments %>
+	<h4>Post Comment</h4>
+	<br>
+	<%= render 'comments/form' %>
+	<br>
+</div>
+
+

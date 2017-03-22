@@ -1,0 +1,11 @@
+<h1><%=link_to "rails", root_path %> <span class="bold"><%=link_to "blog.", root_path %></span></h1>
+<center><hr></center>
+
+<% if logged_in? %>
+  <%= link_to "Users", '#' %>
+      <%= link_to "Profile", current_user %>
+      <%= link_to "Settings", '#' %>
+       <%= link_to "Log out", logout_path, method: "delete" %>
+<% else %>
+  <%= link_to "Log in", login_path %>
+<% end %>

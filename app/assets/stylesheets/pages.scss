@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Quicksand:300,400,500,700');
+
+h1 {
+	font-family: "Quicksand", sans-serif;
+	font-size: 6.5vmax;
+	text-align: center;
+	font-weight: 300;
+	padding: 55px;
+}
+
+h1 a {
+	text-decoration: none;
+	color: #494949;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+hr {
+	width: 80vw;
+	color: #494949;
+}
+
+.container {
+	width: 70vmax;
+  margin: 0 auto;
+  margin-top: 6vmax;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.box {
+	background: #5da4d3;
+  height: 250px;
+  width: 400px;
+  float: left;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+	background: #4388b2;
+}
+
+h2 {
+	font-family: "Lato", sans-serif;
+	font-size: 3vmax;
+	text-align: center;
+	font-weight: 100;
+	color: white;
+}
+
+h2 a {
+	text-decoration: none;
+	color: white;
+}
