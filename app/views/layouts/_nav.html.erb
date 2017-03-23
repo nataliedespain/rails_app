@@ -6,11 +6,13 @@
 <% if logged_in? %>
 	<span><%= link_to "HOME", root_path %></span>
 	<span><%= link_to "ALL POSTS", posts_path %></span>
-  <span><%= link_to "USERS", '#' %></span>
+  <span><%= link_to "USERS", users_path %></span>
   <span class="dropdown">
-  	<%= link_to current_user.name.upcase, current_user %> ▼
+  	<%= link_to current_user.name.upcase, current_user %> 
+  	<i class="fa fa-caret-down" aria-hidden="true"></i>
   	<div class="dropdown-content">
 	  	<%= link_to "PROFILE", current_user %>
+	  	<%= link_to "EDIT PROFILE", edit_user_path(current_user) %>
 	  	<%= link_to "LOG OUT", logout_path, method: "delete" %>
   	</div>
   </span>

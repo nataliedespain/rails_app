@@ -6,7 +6,19 @@
 	<%= link_to posts_path do %>
 		<center><button class="show-button">Back to all posts</button></center>
 	<% end %>
-	<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+	<div class="fa-container">
+		<% if logged_in? and @post.user == current_user %>
+			<%= link_to edit_post_path(@post) do %>
+				<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+			<% end %>
+			&nbsp;&nbsp;&nbsp;
+			<%= link_to post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } do %> 
+				<i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+			<% end %>
+		<% end %>
+	</div>
+
 </div>
 
 <div class="comment-container">
