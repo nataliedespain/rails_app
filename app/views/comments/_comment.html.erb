@@ -1,5 +1,10 @@
 <div class="comment">
-	<h3><%= comment.user.name %>:</h3>
+	<h3>
+		<%= link_to user_path(comment.user) do %>
+			<%= gravatar_for comment.user, size: 50 %>
+		<% end %>
+		<%= comment.user.name %>:
+	</h3>
 	<center><hr></center>
 	<p><%= comment.body %></p>
 	<% if comment.created_at %>

@@ -7,6 +7,58 @@ $lightgray: #ebf1f4;
 $lightpink: #d39eb0;
 $pink: #b26781;
 
+
+/*INDEX PAGE*/
+.users-container {
+	width: 67.5vw;
+	margin: 50px auto;
+	border: $lightgray 2px solid;
+}
+
+.users-container h2 {
+	font-family: "Roboto", sans-serif;
+	font-size: 3vmax;
+	text-align: center;
+	font-weight: 300;
+	color: $darkgray;
+	padding: 40px 0;
+	letter-spacing: 1.5px;
+}
+
+.user  {
+	font-family: "Open Sans", sans-serif;
+	background: $lightgray;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding: 20px;
+	position: relative;
+	width: 60vw;
+}
+
+.user h3 {
+	font-family: "Open Sans", sans-serif;
+	color: $darkgray;
+	letter-spacing: 1.5px;
+	font-size: 35px;
+	font-weight: 100;
+}
+
+
+
+/*NEW PAGE*/
+.form input[type=password] {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	width: 30vw;
+	padding: 5px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	border: 1px solid #b2b2b2;
+	background: white;
+}
+
+
+/*SHOW PAGE*/
 .show-user {
 	font-family: "Open Sans", sans-serif;
 	border: $lightgray 2px solid;

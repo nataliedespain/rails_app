@@ -1,12 +1,20 @@
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="form-container">
+	<div class="form">
+		<h2>Create an Account</h2>
+			<%= form_for(@user) do |f| %>
+			  <div class="text">
+			  	<%= f.text_field :name, placeholder: "Name" %>
+			  </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+			  <div class="text">
+			  	<%= f.text_field :email, placeholder: "Email" %>
+			  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+			  <div class="text">
+			  	<%= f.password_field :password, placeholder: "Password" %>
+			  </div>
 
-  <%= f.submit "Create Account" %>
-<% end %>
+			  <%= f.submit "Create Account" %>
+			<% end %>
+	</div>
+</div>

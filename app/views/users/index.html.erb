@@ -1,3 +1,26 @@
+<div class="users-container">
+
+<h2>All Users</h2>
+
+<div class="count">
+	<% if @users.count == 0 %>
+		<p>No users have been created yet... :(</p>
+	<% end %>
+</div>
+
 <% @users.each do |u| %>
-	<%= u.name %><br>
+
+	<div class="user">
+		<h3> 
+			<%= gravatar_for u %>&nbsp;&nbsp;
+			<%= u.name %>
+		</h3>
+
+		<%= link_to user_path(u) do %>
+			<button class="view-button">VIEW PROFILE</button>
+		<% end %>
+	</div>
+	
 <% end %>
+<br>
+</div>

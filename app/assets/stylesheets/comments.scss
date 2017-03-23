@@ -18,7 +18,7 @@ $pink: #b26781;
 
 .comment {
 	width: 85%;
-	background: white;
+	background: $lightgray;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 20px;
@@ -70,6 +70,9 @@ $pink: #b26781;
 	margin-top: 50px;
 }
 
+.comment a {
+	text-decoration: none;
+}
 
 /*FORM*/
 .comments-form textarea {

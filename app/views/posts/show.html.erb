@@ -1,7 +1,7 @@
 <div class="show">
 	<h2><%= @post.title %></h2>
 	<center><hr></center>
-	<h3>Created by <%= @post.user.name %> <%= time_ago_in_words(@post.created_at) %> ago</h3>
+	<h3>Created by <%= link_to @post.user.name, user_path(@post.user) %> <%= time_ago_in_words(@post.created_at) %> ago</h3>
 	<p><%= @post.body %></p>
 	<%= link_to posts_path do %>
 		<center><button class="show-button">Back to all posts</button></center>
